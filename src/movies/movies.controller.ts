@@ -20,6 +20,8 @@ export class MoviesController {
     async getMovie(@Param('id')id:string){
         return this.movieService.getMovie(id);
     }
+
+    //commit
     @Put('/:id')
     async updateMovie(@Param('id')id: string, @Body() movieDto:MovieDto){
         return this.movieService.updateMovie(id,movieDto);
